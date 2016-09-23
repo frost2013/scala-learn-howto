@@ -30,7 +30,7 @@ object Step6 {
     }
     catch {
       case numFormat: NumberFormatException     => println(x)
-      case _                                    => println("no")
+      case _:Throwable                          => println("no")
     }
   }
 
