@@ -31,7 +31,7 @@ This is text should be output from test function
       pw.close()
     }
     catch{
-      case notFound:java.io.FileNotFoundException => println("Not found file => " + Step12.getCurrentDir)
+      case notFound:java.io.FileNotFoundException => println("Not found file => " + part3.Step12.getCurrentDir)
     }
   }
   def deleteTestFile(name: String): Unit ={
@@ -56,13 +56,13 @@ This is text should be output from test function
   }
 
   test("testLoadLinesFromFile сравнение текста") {
-    val test = Step12.loadLinesFromFile(pathToRecources + "testLog.txt")
+    val test = part3.Step12.loadLinesFromFile(pathToRecources + "testLog.txt")
     assert(test == testLog)
   }
 
   test("testLoadLinesFromFile файл не найден") {
     try {
-      val test = Step12.loadLinesFromFile(pathToRecources + "testNotFound.txt")
+      val test = part3.Step12.loadLinesFromFile(pathToRecources + "testNotFound.txt")
       assert(test == "Cannot open file")
     }
     catch{
@@ -72,7 +72,7 @@ This is text should be output from test function
 
   test("testLoadLinesFromFile нет имени файла") {
     try {
-      val test = Step12.loadLinesFromFile("")
+      val test = part3.Step12.loadLinesFromFile("")
       assert(test == "No filename")
     }
     catch{
@@ -82,7 +82,7 @@ This is text should be output from test function
 
   test("testLoadLinesWithCounts правильное кол-во символом слева") {
     try {
-      val test = Step12.loadLinesWithCounts(pathToRecources + "testCounts.txt")
+      val test = part3.Step12.loadLinesWithCounts(pathToRecources + "testCounts.txt")
 
       for (line <- test.split("\n")){
         val pair = line.toString.trim.split("\\|").toList

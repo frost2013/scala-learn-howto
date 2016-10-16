@@ -1,4 +1,4 @@
-package com.nebiroz.scala
+package com.nebiroz.scala.part3
 
 import scala.collection.{immutable, mutable}
 

@@ -1,4 +1,4 @@
-package com.nebiroz.scala
+package com.nebiroz.scala.part3
 
 /**
   * Created by nebiroz on 9/23/16.
